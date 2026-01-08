@@ -13,6 +13,7 @@
         android:theme="@style/Theme.DayByDayHabitTracker">
         <activity
             android:name=".AuthActivity"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Day by Day Habit Tracker</string>
     <string name="welcomeText">Повернення до свого шляху</string>
+    <string name="startText">Шлях починається з одного кроку</string>
+    <string name="email">Email</string>
 </resources>
