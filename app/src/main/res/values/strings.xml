@@ -3,4 +3,6 @@
     <string name="welcomeText">Повернення до свого шляху</string>
     <string name="startText">Шлях починається з одного кроку</string>
     <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="checkpassword">checkPassword</string>
 </resources>
