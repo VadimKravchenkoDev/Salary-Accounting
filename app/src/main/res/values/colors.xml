@@ -4,6 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="beige">#F8F5F0</color>
     <color name="textColor">#778DA9</color>
-    <color name="buttonColor">#A3B18A</color>
+    <color name="darkBeige">#A3B18A</color>
 
 </resources>

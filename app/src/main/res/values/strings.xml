@@ -6,4 +6,5 @@
     <string name="password">Пароль</string>
     <string name="checkPassword">Підтвердьте пароль</string>
     <string name="signUp">Зареєструватися</string>
+    <string name="or">або</string>
 </resources>
