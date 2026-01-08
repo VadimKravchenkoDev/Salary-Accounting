@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Day by Day Habit Tracker</string>
+    <string name="welcomeText">Повернення до свого шляху</string>
 </resources>
