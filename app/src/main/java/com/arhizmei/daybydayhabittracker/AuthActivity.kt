@@ -13,7 +13,13 @@ class AuthActivity : AppCompatActivity() {
         setContentView(R.layout.activity_auth)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            val paddingPx = (20 * resources.displayMetrics.density).toInt()
+            v.setPadding(
+                systemBars.left + paddingPx,
+                systemBars.top,
+                systemBars.right + paddingPx,
+                systemBars.bottom
+            )
             insets
         }
     }

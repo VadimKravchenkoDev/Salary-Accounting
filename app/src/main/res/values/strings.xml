@@ -4,5 +4,6 @@
     <string name="startText">Шлях починається з одного кроку</string>
     <string name="email">Email</string>
     <string name="password">Пароль</string>
-    <string name="checkpassword">checkPassword</string>
+    <string name="checkPassword">Підтвердьте пароль</string>
+    <string name="signUp">Зареєструватися</string>
 </resources>
