@@ -7,4 +7,6 @@
     <string name="checkPassword">Підтвердьте пароль</string>
     <string name="signUp">Зареєструватися</string>
     <string name="or">або</string>
+    <string name="readyRegText">Вже маєшь аккаунт?</string>
+    <string name="enter">Увійти</string>
 </resources>

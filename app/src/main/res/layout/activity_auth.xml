@@ -99,6 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/checkPasswordLayout" />
 
     <LinearLayout
+        android:id="@+id/lineLinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -107,19 +108,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterButton">
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"
             android:background="@color/darkBeige" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:text="@string/or"
-            android:textColor="@color/textColor"
+            android:textColor="@color/darkBeige"
             android:textSize="14sp" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
@@ -127,6 +131,44 @@
             android:background="@color/darkBeige" />
     </LinearLayout>
 
-    
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineLinear" />
+
+    <LinearLayout
+        android:id="@+id/bottomLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/googleSignInButton">
+
+        <TextView
+            android:id="@+id/readyRegTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:text="@string/readyRegText" />
+
+        <TextView
+            android:id="@+id/enterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter"
+            android:paddingStart="8dp"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
