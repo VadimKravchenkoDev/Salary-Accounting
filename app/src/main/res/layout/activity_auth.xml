@@ -5,21 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/marginTop"
     android:background="@color/beige"
     tools:context=".AuthActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/startText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/marginTop"
         android:gravity="center"
         android:text="@string/startText"
         android:textColor="@color/textColor"
-        android:textSize="20sp"
+        android:textSize="@dimen/textSize"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditLayout"
+        app:layout_constraintStart_toStartOf="@+id/emailEditLayout"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -27,7 +28,9 @@
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/margin_medium"
         android:hint="@string/email"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +40,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEdit"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/layout_height"
             android:inputType="textEmailAddress"
             android:textColor="@color/darkBeige" />
 
@@ -46,19 +49,19 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordLayout"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/marginTop"
         android:hint="@string/password"
         app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditLayout"
+        app:layout_constraintStart_toStartOf="@+id/emailEditLayout"
         app:layout_constraintTop_toBottomOf="@+id/emailEditLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEdit"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/layout_height"
             android:inputType="textEmailAddress"
             android:textColor="@color/darkBeige" />
 
@@ -67,46 +70,47 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/checkPasswordLayout"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/marginTop"
         android:hint="@string/checkPassword"
         app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
+        app:layout_constraintStart_toStartOf="@+id/passwordLayout"
         app:layout_constraintTop_toBottomOf="@+id/passwordLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/checkPasswordEdit"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/layout_height"
             android:inputType="textEmailAddress"
-            android:textColor="@color/darkBeige" />
+            android:textColor="@color/darkBeige"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/enterButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/marginTop"
         android:background="@drawable/enter_button"
         android:text="@string/signUp"
         android:textColor="@color/white"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="@dimen/cornerRadius"
+        app:layout_constraintEnd_toEndOf="@+id/checkPasswordLayout"
+        app:layout_constraintStart_toStartOf="@+id/checkPasswordLayout"
         app:layout_constraintTop_toBottomOf="@+id/checkPasswordLayout" />
 
     <LinearLayout
         android:id="@+id/lineLinear"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/marginTop"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/enterButton"
+        app:layout_constraintStart_toStartOf="@+id/enterButton"
         app:layout_constraintTop_toBottomOf="@+id/enterButton">
 
         <View
@@ -118,11 +122,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingEnd="@dimen/padding_medium"
             android:text="@string/or"
             android:textColor="@color/darkBeige"
-            android:textSize="14sp" />
+            android:textSize="@dimen/textSizeSmall" />
 
         <View
             android:layout_width="0dp"
@@ -133,18 +137,18 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignInButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/marginTop"
+        app:layout_constraintEnd_toEndOf="@+id/enterButton"
+        app:layout_constraintStart_toStartOf="@+id/enterButton"
         app:layout_constraintTop_toBottomOf="@+id/lineLinear" />
 
     <LinearLayout
         android:id="@+id/bottomLinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/marginTop"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,6 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
+            android:textSize="@dimen/textSizeSmall"
             android:text="@string/readyRegText" />
 
         <TextView
@@ -163,9 +168,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/enter"
-            android:paddingStart="8dp"
             android:textColor="@color/blue"
-            android:textSize="14sp"
+            android:textSize="@dimen/textSizeSmall"
 
             />
 
