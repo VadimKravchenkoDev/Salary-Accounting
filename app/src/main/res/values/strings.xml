@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Day by Day Habit Tracker</string>
+    <string name="welcomeText">Повернення до свого шляху</string>
+    <string name="startText">Шлях починається з одного кроку</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="checkPassword">Підтвердьте пароль</string>
+    <string name="signUp">Зареєструватися</string>
+    <string name="or">або</string>
+    <string name="readyRegText">Вже маєшь аккаунт?</string>
+    <string name="enter">Увійти</string>
 </resources>
