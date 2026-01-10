@@ -7,13 +7,23 @@
     android:background="@color/beige"
     tools:context=".auth.SignInFragment">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sign" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/startText"
         android:layout_width="0dp"
         android:layout_height="@dimen/layout_height"
         android:layout_marginTop="@dimen/marginTop"
         android:gravity="center"
-        android:text="@string/startText"
+        android:text="@string/returnTextView"
         android:textColor="@color/textColor"
         android:textSize="@dimen/textSize"
         android:textStyle="bold|italic"
@@ -65,39 +75,29 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/checkPasswordLayout"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginTop"
-            android:hint="@string/checkPassword"
-            app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
-            app:layout_constraintStart_toStartOf="@+id/passwordLayout"
-            app:layout_constraintTop_toBottomOf="@+id/passwordLayout">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/checkPasswordEdit"
-                android:layout_width="match_parent"
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/forgetPasswordTextView"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/layout_height"
-                android:inputType="textPassword"
-                android:textColor="@color/darkBeige" />
+                android:textColor="@color/darkBeige"
+                android:text="@string/forgetPasswordTextView"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="@+id/passwordLayout"
+                app:layout_constraintStart_toStartOf="@+id/passwordLayout"
+                app:layout_constraintTop_toBottomOf="@+id/passwordLayout"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/enterButton"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/layout_height"
-            android:layout_marginTop="@dimen/marginTop"
-            android:background="@drawable/enter_button"
-            android:text="@string/signUp"
-            android:textColor="@color/white"
-            app:cornerRadius="@dimen/cornerRadius"
-            app:layout_constraintEnd_toEndOf="@+id/checkPasswordLayout"
-            app:layout_constraintStart_toStartOf="@+id/checkPasswordLayout"
-            app:layout_constraintTop_toBottomOf="@+id/checkPasswordLayout" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enterButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/enter_button"
+        android:text="@string/signInTextView"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/cornerRadius"
+        app:layout_constraintEnd_toEndOf="@+id/forgetPasswordTextView"
+        app:layout_constraintStart_toStartOf="@+id/forgetPasswordTextView"
+        app:layout_constraintTop_toBottomOf="@+id/forgetPasswordTextView" />
 
         <LinearLayout
             android:id="@+id/lineLinear"
@@ -156,7 +156,7 @@
                 android:id="@+id/readyRegTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/readyRegText"
+                android:text="@string/noAccountTextView"
                 android:textColor="@color/grey"
                 android:textSize="@dimen/textSizeSmall" />
 
@@ -164,22 +164,12 @@
                 android:id="@+id/enterTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/enter"
+                android:text="@string/logInTextView"
                 android:textColor="@color/blue"
                 android:textSize="@dimen/textSizeSmall"
 
                 />
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="102dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/man" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
