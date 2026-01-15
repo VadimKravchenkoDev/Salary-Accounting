@@ -1,12 +1,11 @@
-package auth
+package com.arhizmei.daybydayhabittracker.auth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.arhizmei.daybydayhabittracker.R
-
 
 class SignInFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {

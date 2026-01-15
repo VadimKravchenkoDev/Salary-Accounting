@@ -1,4 +1,4 @@
-package auth
+package com.arhizmei.daybydayhabittracker.auth
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
