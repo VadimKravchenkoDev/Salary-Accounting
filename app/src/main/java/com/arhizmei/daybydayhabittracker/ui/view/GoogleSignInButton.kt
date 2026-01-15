@@ -1,14 +1,17 @@
 package com.arhizmei.daybydayhabittracker.ui.view
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.util.AttributeSet
-import com.google.android.material.R
+import androidx.core.content.ContextCompat
+import com.arhizmei.daybydayhabittracker.R
 import com.google.android.material.button.MaterialButton
 
 class GoogleSignInButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = R.attr.materialButtonStyle
+    defStyleAttr: Int = com.google.android.material.R.attr.materialButtonStyle
 ) : MaterialButton(context, attrs, defStyleAttr) {
     init {
         setupDefaults()
@@ -31,7 +34,7 @@ class GoogleSignInButton @JvmOverloads constructor(
 
                 iconSize = getDimensionPixelSize(
                     R.styleable.GoogleSignInButton_googleIconSize,
-                    dp(18)
+                    dp(24)
                 )
 
                 cornerRadius = getDimensionPixelSize(
@@ -47,20 +50,29 @@ class GoogleSignInButton @JvmOverloads constructor(
     }
 
     private fun setupDefaults() {
-        text = "Continue with Google"
-        setIconResource(R.drawable.ic_google)
-
-        iconGravity = ICON_GRAVITY_TEXT_START
-        iconSize = dp(18)
-
+        // Сначала устанавливаем фон и цвета
         setBackgroundColor(Color.WHITE)
         setTextColor(Color.BLACK)
 
+        // Отключаем tint для иконки, чтобы она отображалась в оригинальных цветах
+        iconTint = null
+
+        // Устанавливаем иконку
+        ContextCompat.getDrawable(context, R.drawable.ic_google)?.let {
+            icon = it
+        }
+
+        // Настройки иконки
+        iconGravity = ICON_GRAVITY_TEXT_START
+        iconSize = dp(24) // Увеличил размер для лучшей видимости
+        iconPadding = dp(12)
+
+        // Остальные настройки
+        text = "Continue with Google"
         strokeWidth = dp(1)
         strokeColor = ColorStateList.valueOf(Color.LTGRAY)
-
         cornerRadius = dp(12)
     }
 
-    private fun dp(i: Int): Int = (value*resources.displayMetrics.density).toInt()
+    private fun dp(i: Int): Int = (i * resources.displayMetrics.density).toInt()
 }

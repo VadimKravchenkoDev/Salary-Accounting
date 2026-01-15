@@ -133,7 +133,7 @@
         </LinearLayout>
 
         <com.google.android.gms.common.SignInButton
-            android:id="@+id/googleSignInButton"
+            android:id="@+id/btnGoogle"
             android:layout_width="0dp"
             android:layout_height="@dimen/layout_height"
             android:layout_marginTop="@dimen/marginTop"
@@ -150,7 +150,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/googleSignInButton">
+            app:layout_constraintTop_toBottomOf="@+id/btnGoogle">
 
             <TextView
                 android:id="@+id/readyRegTextView"
