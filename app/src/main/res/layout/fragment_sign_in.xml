@@ -132,11 +132,14 @@
                 android:background="@color/darkBeige" />
         </LinearLayout>
 
-        <com.google.android.gms.common.SignInButton
+        <com.arhizmei.salaryaccounting.ui.view.GoogleSignInButton
             android:id="@+id/btnGoogle"
             android:layout_width="0dp"
             android:layout_height="@dimen/layout_height"
             android:layout_marginTop="@dimen/marginTop"
+            app:googleText="Sign in with Google"
+            app:googleCornerRadius="14dp"
+            app:googleIconSize="18dp"
             app:layout_constraintEnd_toEndOf="@+id/enterButton"
             app:layout_constraintStart_toStartOf="@+id/enterButton"
             app:layout_constraintTop_toBottomOf="@+id/lineLinear" />
