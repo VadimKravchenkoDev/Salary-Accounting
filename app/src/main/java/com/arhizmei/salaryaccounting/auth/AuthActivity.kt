@@ -22,5 +22,12 @@ class AuthActivity : AppCompatActivity() {
             )
             insets
         }
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, LogInFragment())
+                .commit()
+
+        }
     }
 }
