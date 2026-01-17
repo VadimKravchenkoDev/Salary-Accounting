@@ -60,7 +60,7 @@ class GoogleSignInButton @JvmOverloads constructor(
         }
 
         iconGravity = ICON_GRAVITY_TEXT_START
-        iconSize = dp(24) 
+        iconSize = dp(24)
         iconPadding = dp(12)
 
         // Остальные настройки
