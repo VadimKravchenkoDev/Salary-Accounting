@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Day by Day Habit Tracker"
+rootProject.name = "Salary Accounting"
 include(":app")

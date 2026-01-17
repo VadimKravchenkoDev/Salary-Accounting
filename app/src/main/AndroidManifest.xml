@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DayByDayHabitTracker">
+        android:theme="@style/Theme.SalaryAccounting">
         <activity
             android:name=".auth.AuthActivity"
             android:theme="@style/Theme.Material3.DayNight.NoActionBar"

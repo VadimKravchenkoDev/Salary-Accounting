@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.arhizmei.daybydayhabittracker"
+    namespace = "com.arhizmei.salaryaccounting"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.arhizmei.daybydayhabittracker"
+        applicationId = "com.arhizmei.salaryaccounting"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

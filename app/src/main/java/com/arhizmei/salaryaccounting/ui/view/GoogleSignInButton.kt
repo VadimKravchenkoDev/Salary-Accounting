@@ -1,11 +1,11 @@
-package com.arhizmei.daybydayhabittracker.ui.view
+package com.arhizmei.salaryaccounting.ui.view
 
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.util.AttributeSet
 import androidx.core.content.ContextCompat
-import com.arhizmei.daybydayhabittracker.R
+import com.arhizmei.salaryaccounting.R
 import com.google.android.material.button.MaterialButton
 
 class GoogleSignInButton @JvmOverloads constructor(

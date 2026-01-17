@@ -144,7 +144,7 @@
             android:background="@color/darkBeige" />
     </LinearLayout>
 
-    <com.arhizmei.daybydayhabittracker.ui.view.GoogleSignInButton
+    <com.arhizmei.salaryaccounting.ui.view.GoogleSignInButton
         android:id="@+id/btnGoogle"
         android:layout_width="0dp"
         android:layout_height="@dimen/layout_height"
