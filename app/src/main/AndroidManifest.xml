@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SalaryAccounting">
         <activity
-            android:name=".auth.AuthActivity"
+            android:name=".ui.auth.AuthActivity"
             android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:exported="true">
             <intent-filter>

@@ -1,4 +1,4 @@
-package com.arhizmei.salaryaccounting.auth
+package com.arhizmei.salaryaccounting.ui.auth
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
