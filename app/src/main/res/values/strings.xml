@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Day by Day Habit Tracker</string>
+    <string name="app_name">salary accounting</string>
     <string name="welcomeText">Повернення до свого шляху</string>
-    <string name="startText">Шлях починається з одного кроку</string>
+    <string name="startText">Почніть з реєстрації</string>
     <string name="email">Email</string>
     <string name="password">Пароль</string>
     <string name="checkPassword">Підтвердьте пароль</string>
@@ -9,8 +9,6 @@
     <string name="or">або</string>
     <string name="readyRegText">Вже маєшь аккаунт?</string>
     <string name="enter">Увійти</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="returnTextView">Повернення до свого шляху</string>
     <string name="noAccountTextView">Немає акаунту?</string>
     <string name="logInTextView">Зареєструватися</string>

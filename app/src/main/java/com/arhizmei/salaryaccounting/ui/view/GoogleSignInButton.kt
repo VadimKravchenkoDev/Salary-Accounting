@@ -1,11 +1,11 @@
-package com.arhizmei.daybydayhabittracker.ui.view
+package com.arhizmei.salaryaccounting.ui.view
 
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.util.AttributeSet
 import androidx.core.content.ContextCompat
-import com.arhizmei.daybydayhabittracker.R
+import com.arhizmei.salaryaccounting.R
 import com.google.android.material.button.MaterialButton
 
 class GoogleSignInButton @JvmOverloads constructor(
@@ -50,21 +50,17 @@ class GoogleSignInButton @JvmOverloads constructor(
     }
 
     private fun setupDefaults() {
-        // Сначала устанавливаем фон и цвета
         setBackgroundColor(Color.WHITE)
         setTextColor(Color.BLACK)
 
-        // Отключаем tint для иконки, чтобы она отображалась в оригинальных цветах
         iconTint = null
 
-        // Устанавливаем иконку
         ContextCompat.getDrawable(context, R.drawable.ic_google)?.let {
             icon = it
         }
 
-        // Настройки иконки
         iconGravity = ICON_GRAVITY_TEXT_START
-        iconSize = dp(24) // Увеличил размер для лучшей видимости
+        iconSize = dp(24)
         iconPadding = dp(12)
 
         // Остальные настройки

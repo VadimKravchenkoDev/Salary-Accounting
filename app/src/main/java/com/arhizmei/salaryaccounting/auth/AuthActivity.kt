@@ -1,11 +1,11 @@
-package com.arhizmei.daybydayhabittracker.auth
+package com.arhizmei.salaryaccounting.auth
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.arhizmei.daybydayhabittracker.R
+import com.arhizmei.salaryaccounting.R
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +21,13 @@ class AuthActivity : AppCompatActivity() {
                 systemBars.bottom
             )
             insets
+        }
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, LogInFragment())
+                .commit()
+
         }
     }
 }

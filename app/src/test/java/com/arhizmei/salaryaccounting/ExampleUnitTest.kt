@@ -1,4 +1,4 @@
-package com.arhizmei.daybydayhabittracker
+package com.arhizmei.salaryaccounting
 
 import org.junit.Test
 

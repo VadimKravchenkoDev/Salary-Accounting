@@ -1,11 +1,11 @@
-package com.arhizmei.daybydayhabittracker.auth
+package com.arhizmei.salaryaccounting.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.arhizmei.daybydayhabittracker.R
+import com.arhizmei.salaryaccounting.R
 
 class SignInFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
