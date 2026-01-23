@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.arhizmei.daybydayhabittracker"
+    namespace = "com.arhizmei.salaryaccounting"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.arhizmei.daybydayhabittracker"
+        applicationId = "com.arhizmei.salaryaccounting"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -35,6 +35,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -44,6 +48,10 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.auth)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
