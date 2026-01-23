@@ -7,5 +7,6 @@
     <dimen name="textSizeSmall">12sp</dimen>
     <dimen name="padding_medium">15sp</dimen>
     <dimen name="cornerRadius">2dp</dimen>
+    <dimen name="space">8dp</dimen>
 
 </resources>

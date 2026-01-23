@@ -1,10 +1,10 @@
-package com.arhizmei.salaryaccounting.ui.viewModel
+package com.arhizmei.salaryaccounting.ui.signin
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class SignInViewModel : ViewModel() {
     private val _text = MutableLiveData<String>()
     val text: LiveData<String> = _text
 

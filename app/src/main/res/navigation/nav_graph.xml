@@ -2,19 +2,27 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/navFragment">
+    app:startDestination="@id/signInFragment">
 
     <fragment
-        android:id="@+id/navFragment"
-        android:name="com.arhizmei.salaryaccounting.ui.auth.LogInFragment">
+        android:id="@+id/signInFragment"
+        android:name="com.arhizmei.salaryaccounting.ui.signin.SignInFragment">
 
         <action
-            android:id="@+id/action_logIng_to_signUp"
+            android:id="@+id/action_sigIn_to_signUp"
             app:destination="@+id/signUpFragment"/>
     </fragment>
 
+
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.arhizmei.salaryaccounting.ui.auth.SignUpFragment"></fragment>
+        android:name="com.arhizmei.salaryaccounting.ui.signup.SignUpFragment">
+
+        <action
+            android:id="@+id/action_sigUp_to_signIn"
+            app:destination="@+id/signInFragment"/>
+    </fragment>
+
+
 
 </navigation>

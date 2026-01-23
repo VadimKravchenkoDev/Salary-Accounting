@@ -1,37 +1,33 @@
-package com.arhizmei.salaryaccounting.ui.auth
+package com.arhizmei.salaryaccounting.ui.signin
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.arhizmei.salaryaccounting.R
-import com.arhizmei.salaryaccounting.databinding.FragmentLogInBinding
-import com.arhizmei.salaryaccounting.ui.viewModel.MainViewModel
+import com.arhizmei.salaryaccounting.databinding.FragmentSignInBinding
 
-class LogInFragment : Fragment() {
-    private lateinit var viewModel: MainViewModel
-    private var _binding: FragmentLogInBinding? = null
+class SignInFragment : Fragment() {
+    private val viewModel: SignInViewModel by viewModels()
+    private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLogInBinding.inflate(inflater, container, false)
+        _binding = FragmentSignInBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstance: Bundle?) {
         super.onViewCreated(view, savedInstance)
-
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-
-        binding.logInTextView.setOnClickListener {
+        binding.sigInTextView.setOnClickListener {
             findNavController()
-                .navigate(R.id.action_logIng_to_signUp)
+                .navigate(R.id.action_sigIn_to_signUp)
         }
     }
 
@@ -39,5 +35,4 @@ class LogInFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }
