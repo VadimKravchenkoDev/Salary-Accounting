@@ -10,9 +10,8 @@
 
         <action
             android:id="@+id/action_sigIn_to_signUp"
-            app:destination="@+id/signUpFragment"/>
+            app:destination="@+id/signUpFragment" />
     </fragment>
-
 
     <fragment
         android:id="@+id/signUpFragment"
@@ -20,9 +19,7 @@
 
         <action
             android:id="@+id/action_sigUp_to_signIn"
-            app:destination="@+id/signInFragment"/>
+            app:destination="@+id/signInFragment" />
     </fragment>
-
-
-
+    
 </navigation>
