@@ -44,9 +44,7 @@ class GoogleSignInButton @JvmOverloads constructor(
             } finally {
                 recycle()
             }
-
         }
-
     }
 
     private fun setupDefaults() {
