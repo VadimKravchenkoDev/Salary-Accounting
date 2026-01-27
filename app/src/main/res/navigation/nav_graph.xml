@@ -7,7 +7,6 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.arhizmei.salaryaccounting.ui.signin.SignInFragment">
-
         <action
             android:id="@+id/action_sigIn_to_signUp"
             app:destination="@+id/signUpFragment" />
@@ -16,7 +15,6 @@
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.arhizmei.salaryaccounting.ui.signup.SignUpFragment">
-
         <action
             android:id="@+id/action_sigUp_to_signIn"
             app:destination="@+id/signInFragment" />
