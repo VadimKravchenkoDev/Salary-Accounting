@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph">
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.arhizmei.salaryaccounting.ui.calculator.calculatorFragment" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.arhizmei.salaryaccounting.ui.calendar.calendarFragment" />
+    <fragment
+        android:id="@+id/shiftsFragment"
+        android:name="com.arhizmei.salaryaccounting.ui.shifts.ShiftsFragment" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.arhizmei.salaryaccounting.ui.statistics.StatisticsFragment" />
+    
+</navigation>
