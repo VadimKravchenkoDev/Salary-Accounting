@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/calculatorFragment"
+        android:icon="@drawable/ic_calculator"
+        android:title="Калькулятор" />
+    <item
+        android:id="@+id/calendarFragment"
+        android:icon="@drawable/ic_schedule"
+        android:title="Календар" />
+    <item
+        android:id="@+id/shiftsFragment"
+        android:icon="@drawable/ic_shift"
+        android:title="Зміни" />
+    <item
+        android:id="@+id/statisticsFragment"
+        android:icon="@drawable/ic_analytics"
+        android:title="Статистика" />
+
+</menu>

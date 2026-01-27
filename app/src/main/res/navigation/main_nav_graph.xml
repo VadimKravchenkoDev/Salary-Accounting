@@ -15,5 +15,5 @@
     <fragment
         android:id="@+id/statisticsFragment"
         android:name="com.arhizmei.salaryaccounting.ui.statistics.StatisticsFragment" />
-    
+
 </navigation>
