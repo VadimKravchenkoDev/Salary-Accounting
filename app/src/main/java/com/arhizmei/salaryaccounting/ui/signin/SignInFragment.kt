@@ -1,14 +1,17 @@
 package com.arhizmei.salaryaccounting.ui.signin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.arhizmei.salaryaccounting.R
 import com.arhizmei.salaryaccounting.databinding.FragmentSignInBinding
+import com.arhizmei.salaryaccounting.ui.activity.MainActivity
 
 class SignInFragment : Fragment() {
     private val viewModel: SignInViewModel by viewModels()
@@ -29,10 +32,20 @@ class SignInFragment : Fragment() {
             findNavController()
                 .navigate(R.id.action_sigIn_to_signUp)
         }
+        binding.btnGoogle.setOnClickListener {
+            openMainActivity()
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+}
+
+private fun SignInFragment.openMainActivity() {
+    startActivity(
+        Intent(requireContext(), MainActivity::class.java)
+    )
+    requireActivity().finish()
 }
