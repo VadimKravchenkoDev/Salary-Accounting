@@ -21,9 +21,7 @@ class SignUpFragment : Fragment() {
     ): View? {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         return binding.root
-
     }
-
     override fun onViewCreated(view: View, savedInstance: Bundle?) {
         super.onViewCreated(view, savedInstance)
         binding.enterTextView.setOnClickListener {
@@ -31,7 +29,6 @@ class SignUpFragment : Fragment() {
                 .navigate(com.arhizmei.salaryaccounting.R.id.action_sigUp_to_signIn)
         }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
