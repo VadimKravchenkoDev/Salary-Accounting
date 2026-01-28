@@ -4,18 +4,18 @@
     <item
         android:id="@+id/calculatorFragment"
         android:icon="@drawable/ic_calculator"
-        android:title="Калькулятор" />
+        android:title="@string/calculator" />
     <item
         android:id="@+id/calendarFragment"
         android:icon="@drawable/ic_schedule"
-        android:title="Календар" />
+        android:title="@string/calendar" />
     <item
         android:id="@+id/shiftsFragment"
         android:icon="@drawable/ic_shift"
-        android:title="Зміни" />
+        android:title="@string/shifts" />
     <item
         android:id="@+id/statisticsFragment"
         android:icon="@drawable/ic_analytics"
-        android:title="Статистика" />
+        android:title="@string/statistics" />
 
 </menu>
