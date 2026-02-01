@@ -3,6 +3,7 @@ package com.arhizmei.salaryaccounting.ui.activity
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
@@ -29,5 +30,9 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bottomNav.setupWithNavController(navController)
         binding.bottomNav.itemIconTintList = null
+
+        val iconColorStateList = ContextCompat.getColorStateList(this,R.color.nav_icon_color)
+        binding.bottomNav.itemIconTintList = iconColorStateList
+        binding.bottomNav.itemTextColor = iconColorStateList
     }
 }
