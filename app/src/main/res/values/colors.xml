@@ -6,7 +6,10 @@
     <color name="textColor">#778DA9</color>
     <color name="darkBeige">#8A9FB1</color>
     <color name="grey">#727370</color>
+    <color name="greyLight">#F0F0F0</color>
     <color name="blue">#00B0FF</color>
+    <color name="orange">#FFA412</color>
+    <color name="blueStandard">#1E80F1</color>
     <color name="nav_selected">#1E80F1</color>
     <color name="nav_unselected">#B5B5B5</color>
 

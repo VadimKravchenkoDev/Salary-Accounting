@@ -12,6 +12,7 @@
     <dimen name="textSize">20sp</dimen>
     <dimen name="textSizeSmall">12sp</dimen>
     <dimen name="textSizeMain">23sp</dimen>
+    <dimen name="textSizeButton">15sp</dimen>
 
 
     <dimen name="layout_height">50dp</dimen>
