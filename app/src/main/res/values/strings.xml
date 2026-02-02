@@ -19,4 +19,6 @@
     <string name="shifts">Зміни</string>
     <string name="statistics">Статистика</string>
     <string name="calculator">Калькулятор</string>
+    <string name="salaryText">Розрахунок зарплати</string>
+    <string name="zeroText">0.0</string>
 </resources>

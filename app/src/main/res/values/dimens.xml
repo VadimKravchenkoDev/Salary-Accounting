@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--margin-->
     <dimen name="margin_medium">20dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
     <dimen name="marginTop">16dp</dimen>
-    <dimen name="layout_height">50dp</dimen>
+    <dimen name="marginStartMain">17dp</dimen>
+    <dimen name="marginEndMain">17dp</dimen>
+    <dimen name="marginTopMain">50dp</dimen>
+
+    <!--text-->
     <dimen name="textSize">20sp</dimen>
     <dimen name="textSizeSmall">12sp</dimen>
-    <dimen name="padding_medium">15sp</dimen>
+    <dimen name="textSizeMain">23sp</dimen>
+
+
+    <dimen name="layout_height">50dp</dimen>
     <dimen name="cornerRadius">2dp</dimen>
+    <dimen name="cornerLargeRadius">8dp</dimen>
     <dimen name="space">8dp</dimen>
+    <dimen name="padding_medium">15dp</dimen>
+    <dimen name="paddingSmall">10dp</dimen>
 
 </resources>

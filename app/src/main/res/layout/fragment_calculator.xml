@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.calculator.calculatorFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.calculator.CalculatorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/salaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTopMain"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/salaryText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/salaryAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTop"
+        android:fontFamily="@font/inter"
+        android:text="@string/salaryText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salaryText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salaryAmountText">
+    <EditText
+        android:id="@+id/salaryAmountEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:background="@null"
+        android:fontFamily="@font/inter"
+        android:text="@string/zeroText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeSmall"
+        />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
