@@ -14,10 +14,16 @@
     <string name="logInTextView">Зареєструватися</string>
     <string name="signInTextView">Увійти</string>
     <string name="forgetPasswordTextView">Забули пароль?</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="calendar">Календар</string>
     <string name="shifts">Зміни</string>
     <string name="statistics">Статистика</string>
     <string name="calculator">Калькулятор</string>
+    <string name="salaryText">Розрахунок зарплати</string>
+    <string name="zeroText">0.0</string>
+    <string name="hoursOfWeek">Годин на тиждень</string>
+    <string name="daysOnWeeks">Днів на тиждень</string>
+    <string name="salaryOfWeek">Розмір зарплати у місяць</string>
+    <string name="calculateText">Розрахувати</string>
+    <string name="reloadText">Оновити</string>
 </resources>

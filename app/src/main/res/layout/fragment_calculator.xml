@@ -1,14 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.calculator.calculatorFragment">
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.calculator.CalculatorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/salaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTopMain"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/salaryText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/salaryAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTop"
+        android:fontFamily="@font/inter"
+        android:text="@string/salaryOfWeek"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salaryText" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewSalaryAmountEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        android:background="@color/greyLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salaryAmountText">
+    <EditText
+        android:id="@+id/salaryAmountEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingSmall"
+        android:background="@null"
+        android:fontFamily="@font/inter"
+        android:hint="@string/zeroText"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeSmall"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/hoursOfWeekText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTop"
+        android:fontFamily="@font/inter"
+        android:text="@string/hoursOfWeek"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewSalaryAmountEdit" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewHoursOfWeekEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hoursOfWeekText">
+        <EditText
+            android:id="@+id/hoursOfWeekEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingSmall"
+            android:background="@null"
+            android:fontFamily="@font/inter"
+            android:hint="@string/zeroText"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/dayOfWeekText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTop"
+        android:fontFamily="@font/inter"
+        android:text="@string/daysOnWeeks"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewHoursOfWeekEdit" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewDayOfWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dayOfWeekText">
+        <EditText
+            android:id="@+id/dayOfWeekEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingSmall"
+            android:background="@null"
+            android:fontFamily="@font/inter"
+            android:hint="@string/zeroText"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/calculateText"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeButton"
+        app:backgroundTint="@color/blueStandard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewDayOfWeek"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTopMain"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        app:cornerRadius="@dimen/cornerLargeRadius"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/reloadText"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeButton"
+        app:backgroundTint="@color/orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        app:cornerRadius="@dimen/cornerLargeRadius"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
