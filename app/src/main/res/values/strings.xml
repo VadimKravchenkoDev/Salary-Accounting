@@ -26,4 +26,5 @@
     <string name="salaryOfWeek">Розмір зарплати у місяць</string>
     <string name="calculateText">Розрахувати</string>
     <string name="reloadText">Оновити</string>
+    <string name="salaryResultText">Результат</string>
 </resources>
