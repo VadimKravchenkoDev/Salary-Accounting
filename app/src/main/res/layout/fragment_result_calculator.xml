@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".ui.calculator.ResultCalculatorFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.calculator.ResultCalculatorFragment">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="25dp"
         android:layout_height="24dp"
-        android:src="@drawable/back"
         android:contentDescription="@string/back"
+        android:src="@drawable/back"
         app:layout_constraintBottom_toBottomOf="@+id/salaryText"
         app:layout_constraintStart_toStartOf="@+id/constraintSalaryAmount"
         app:layout_constraintTop_toTopOf="@+id/salaryText" />
@@ -21,8 +21,8 @@
         android:id="@+id/salaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/inter_semibold"
         android:text="@string/salaryResultText"
         android:textColor="@color/black"
@@ -31,99 +31,98 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintSalaryAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        android:background="@drawable/bg_rounded_border"
+        android:paddingTop="@dimen/paddingStartMain"
+        android:paddingBottom="@dimen/paddingBottomMain"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salaryText"
+        app:layout_marginStart="@dimen/marginTop">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintSalaryAmount"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/salaryAmountText"
+            android:layout_width="158dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="@dimen/marginStartMain"
+            android:fontFamily="@font/inter"
+            android:text="@string/salaryOfWeek"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/salaryAmountEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/inter"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintStart_toStartOf="@+id/salaryAmountText"
+            app:layout_constraintTop_toBottomOf="@+id/salaryAmountText" />
+
+        <TextView
+            android:id="@+id/hoursOfWeekText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marginStartMain"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginEnd="@dimen/marginEndMain"
-            android:paddingTop="@dimen/paddingStartMain"
-            android:paddingBottom="@dimen/paddingBottomMain"
-            app:layout_marginStart="@dimen/marginTop"
-            app:cardCornerRadius="@dimen/cornerLargeRadius"
-            android:background="@drawable/bg_rounded_border"
+            android:layout_marginTop="@dimen/marginTop"
+            android:fontFamily="@font/inter"
+            android:text="@string/hoursOfWeek"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/salaryText">
+            app:layout_constraintTop_toBottomOf="@id/salaryAmountEdit" />
 
-            <TextView
-                android:id="@+id/salaryAmountText"
-                android:layout_width="158dp"
-                android:layout_height="22dp"
-                android:layout_marginStart="@dimen/marginStartMain"
-                android:fontFamily="@font/inter"
-                android:text="@string/salaryOfWeek"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/hoursOfWeekEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/inter"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintStart_toStartOf="@+id/hoursOfWeekText"
+            app:layout_constraintTop_toBottomOf="@id/hoursOfWeekText" />
 
-            <TextView
-                android:id="@+id/salaryAmountEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                app:layout_constraintStart_toStartOf="@+id/salaryAmountText"
-                app:layout_constraintTop_toBottomOf="@+id/salaryAmountText" />
+        <TextView
+            android:id="@+id/dayOfWeekText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStartMain"
+            android:layout_marginTop="@dimen/marginTop"
+            android:fontFamily="@font/inter"
+            android:text="@string/daysOnWeeks"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hoursOfWeekEdit" />
 
-            <TextView
-                android:id="@+id/hoursOfWeekText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartMain"
-                android:layout_marginTop="@dimen/marginTop"
-                android:fontFamily="@font/inter"
-                android:text="@string/hoursOfWeek"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/salaryAmountEdit" />
-
-            <TextView
-                android:id="@+id/hoursOfWeekEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                app:layout_constraintStart_toStartOf="@+id/hoursOfWeekText"
-                app:layout_constraintTop_toBottomOf="@id/hoursOfWeekText" />
-
-            <TextView
-                android:id="@+id/dayOfWeekText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartMain"
-                android:layout_marginTop="@dimen/marginTop"
-                android:fontFamily="@font/inter"
-                android:text="@string/daysOnWeeks"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/hoursOfWeekEdit" />
-
-            <TextView
-                android:id="@+id/dayOfWeekEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                app:layout_constraintStart_toStartOf="@+id/dayOfWeekText"
-                app:layout_constraintTop_toBottomOf="@id/dayOfWeekText" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/dayOfWeekEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/inter"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintStart_toStartOf="@+id/dayOfWeekText"
+            app:layout_constraintTop_toBottomOf="@id/dayOfWeekText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--Every hour-->
     <TextView
@@ -133,36 +132,35 @@
         android:layout_marginStart="@dimen/marginStartMain"
         android:layout_marginTop="@dimen/marginStartMain"
         android:fontFamily="@font/inter"
-        android:text="@string/salaryOfWeek"
+        android:text="@string/everyHour"
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraintSalaryAmount">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardViewEveryHour"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginStartMain"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/marginEndMain"
-            android:backgroundTint="@color/greyLight"
-            app:cardCornerRadius="@dimen/cornerLargeRadius"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/everyHour">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewEveryHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        android:backgroundTint="@color/greyLight"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/everyHour">
 
-            <TextView
-                android:id="@+id/everyHourTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingSmall"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                 />
-        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/everyHourTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:padding="@dimen/paddingSmall"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
 
     <!--Every day-->
 
@@ -173,38 +171,37 @@
         android:layout_marginStart="@dimen/marginStartMain"
         android:layout_marginTop="@dimen/marginStartMain"
         android:fontFamily="@font/inter"
-        android:text="@string/salaryOfWeek"
+        android:text="@string/everyDay"
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardViewEveryHour">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardViewEveryDay"
-            android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewEveryDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        android:backgroundTint="@color/greyLight"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/everyDayText">
+
+        <TextView
+            android:id="@+id/everyDayTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginStartMain"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/marginEndMain"
-            android:backgroundTint="@color/greyLight"
-            app:cardCornerRadius="@dimen/cornerLargeRadius"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/everyDayText">
+            android:fontFamily="@font/inter"
+            android:padding="@dimen/paddingSmall"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:id="@+id/everyDayTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingSmall"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                />
-        </com.google.android.material.card.MaterialCardView>
-
-        <!--Every week-->
+    <!--Every week-->
     <TextView
         android:id="@+id/everyWeekText"
         android:layout_width="158dp"
@@ -212,38 +209,37 @@
         android:layout_marginStart="@dimen/marginStartMain"
         android:layout_marginTop="@dimen/marginStartMain"
         android:fontFamily="@font/inter"
-        android:text="@string/salaryOfWeek"
+        android:text="@string/everyWeek"
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardViewEveryDay">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardViEveryWeek"
-            android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViEveryWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        android:backgroundTint="@color/greyLight"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/everyWeekText">
+
+        <TextView
+            android:id="@+id/everyWeekTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginStartMain"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/marginEndMain"
-            android:backgroundTint="@color/greyLight"
-            app:cardCornerRadius="@dimen/cornerLargeRadius"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/everyWeekText">
+            android:fontFamily="@font/inter"
+            android:padding="@dimen/paddingSmall"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:id="@+id/everyWeekTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingSmall"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                />
-        </com.google.android.material.card.MaterialCardView>
-
-        <!--Every quarter-->
+    <!--Every quarter-->
     <TextView
         android:id="@+id/everyQuarterText"
         android:layout_width="158dp"
@@ -251,38 +247,37 @@
         android:layout_marginStart="@dimen/marginStartMain"
         android:layout_marginTop="@dimen/marginStartMain"
         android:fontFamily="@font/inter"
-        android:text="@string/salaryOfWeek"
+        android:text="@string/everyQuarter"
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardViEveryWeek">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardViewEveryQuarter"
-            android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewEveryQuarter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        android:backgroundTint="@color/greyLight"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/everyQuarterText">
+
+        <TextView
+            android:id="@+id/everyQuarterTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginStartMain"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/marginEndMain"
-            android:backgroundTint="@color/greyLight"
-            app:cardCornerRadius="@dimen/cornerLargeRadius"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/everyQuarterText">
+            android:fontFamily="@font/inter"
+            android:padding="@dimen/paddingSmall"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:id="@+id/everyQuarterTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingSmall"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                />
-        </com.google.android.material.card.MaterialCardView>
-
-        <!--Every year-->
+    <!--Every year-->
     <TextView
         android:id="@+id/everyYearText"
         android:layout_width="158dp"
@@ -290,38 +285,33 @@
         android:layout_marginStart="@dimen/marginStartMain"
         android:layout_marginTop="@dimen/marginStartMain"
         android:fontFamily="@font/inter"
-        android:text="@string/salaryOfWeek"
+        android:text="@string/everyYear"
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardViewEveryQuarter">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardViewEveryYear"
-            android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewEveryYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStartMain"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/marginEndMain"
+        android:backgroundTint="@color/greyLight"
+        app:cardCornerRadius="@dimen/cornerLargeRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/everyYearText">
+
+        <TextView
+            android:id="@+id/everyYearTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/marginStartMain"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/marginEndMain"
-            android:backgroundTint="@color/greyLight"
-            app:cardCornerRadius="@dimen/cornerLargeRadius"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/everyYearText">
-
-            <TextView
-                android:id="@+id/everyYearTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingSmall"
-                android:fontFamily="@font/inter"
-                android:text="@string/zeroText"
-                android:paddingTop="@dimen/paddingSmall"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeSmall"
-                />
-        </com.google.android.material.card.MaterialCardView>
-
-
-
-
+            android:fontFamily="@font/inter"
+            android:padding="@dimen/paddingSmall"
+            android:paddingTop="@dimen/paddingSmall"
+            android:text="@string/zeroText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeSmall" />
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
