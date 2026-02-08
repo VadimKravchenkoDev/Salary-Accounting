@@ -7,6 +7,16 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".ui.calculator.ResultCalculatorFragment">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        android:src="@drawable/back"
+        android:contentDescription="@string/back"
+        app:layout_constraintBottom_toBottomOf="@+id/salaryText"
+        app:layout_constraintStart_toStartOf="@+id/constraintSalaryAmount"
+        app:layout_constraintTop_toTopOf="@+id/salaryText" />
+
     <TextView
         android:id="@+id/salaryText"
         android:layout_width="wrap_content"
@@ -23,12 +33,14 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardViewSalaryAmountEdit"
+            android:id="@+id/constraintSalaryAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marginStartMain"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/marginEndMain"
+            android:paddingTop="@dimen/paddingStartMain"
+            android:paddingBottom="@dimen/paddingBottomMain"
             app:layout_marginStart="@dimen/marginTop"
             app:cardCornerRadius="@dimen/cornerLargeRadius"
             android:background="@color/greyLight"
@@ -40,13 +52,12 @@
                 android:layout_width="158dp"
                 android:layout_height="22dp"
                 android:layout_marginStart="@dimen/marginStartMain"
-                android:layout_marginTop="@dimen/marginTop"
                 android:fontFamily="@font/inter"
                 android:text="@string/salaryOfWeek"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSizeSmall"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/salaryText" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/salaryAmountEdit"
@@ -54,8 +65,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:fontFamily="@font/inter"
-                android:hint="@string/zeroText"
-                android:inputType="number"
+                android:text="@string/zeroText"
                 android:paddingTop="@dimen/paddingSmall"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSizeSmall"
@@ -81,8 +91,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:fontFamily="@font/inter"
-                android:hint="@string/zeroText"
-                android:inputType="number"
+                android:text="@string/zeroText"
                 android:paddingTop="@dimen/paddingSmall"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSizeSmall"
@@ -108,8 +117,7 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:fontFamily="@font/inter"
-                android:hint="@string/zeroText"
-                android:inputType="number"
+                android:text="@string/zeroText"
                 android:paddingTop="@dimen/paddingSmall"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSizeSmall"
@@ -128,7 +136,7 @@
             android:layout_marginEnd="@dimen/marginEndMain"
             app:cardCornerRadius="@dimen/cornerLargeRadius"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hoursOfWeekText">
+            app:layout_constraintTop_toBottomOf="@id/constraintSalaryAmount">
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -143,18 +151,11 @@
             android:layout_marginEnd="@dimen/marginEndMain"
             app:cardCornerRadius="@dimen/cornerLargeRadius"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dayOfWeekText">
+            app:layout_constraintTop_toBottomOf="@id/cardViewHoursOfWeekEdit">
 
         </com.google.android.material.card.MaterialCardView>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="25dp"
-        android:layout_height="24dp"
-        android:src="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="@+id/salaryText"
-        app:layout_constraintStart_toStartOf="@+id/cardViewSalaryAmountEdit"
-        app:layout_constraintTop_toTopOf="@+id/salaryText" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
