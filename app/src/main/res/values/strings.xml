@@ -26,4 +26,11 @@
     <string name="salaryOfWeek">Розмір зарплати у місяць</string>
     <string name="calculateText">Розрахувати</string>
     <string name="reloadText">Оновити</string>
+    <string name="salaryResultText">Результат</string>
+    <string name="back">back</string>
+    <string name="everyHour">Кожну годину</string>
+    <string name="everyDay">Кожен день</string>
+    <string name="everyWeek">Кожен тиждень</string>
+    <string name="everyQuarter">Кожен квартал</string>
+    <string name="everyYear">Річний</string>
 </resources>

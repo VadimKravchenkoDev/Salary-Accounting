@@ -19,6 +19,10 @@
     <dimen name="cornerRadius">2dp</dimen>
     <dimen name="cornerLargeRadius">8dp</dimen>
     <dimen name="space">8dp</dimen>
+
+    <!--padding-->
+    <dimen name="paddingStartMain">17dp</dimen>
+    <dimen name="paddingBottomMain">17dp</dimen>
     <dimen name="padding_medium">15dp</dimen>
     <dimen name="paddingSmall">10dp</dimen>
 
