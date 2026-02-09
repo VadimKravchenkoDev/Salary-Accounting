@@ -136,7 +136,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraintSalaryAmount">
+        app:layout_constraintTop_toBottomOf="@id/constraintSalaryAmount"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewEveryHour"
@@ -175,7 +175,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViewEveryHour">
+        app:layout_constraintTop_toBottomOf="@id/cardViewEveryHour"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewEveryDay"
@@ -213,7 +213,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViewEveryDay">
+        app:layout_constraintTop_toBottomOf="@id/cardViewEveryDay"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViEveryWeek"
@@ -251,7 +251,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViEveryWeek">
+        app:layout_constraintTop_toBottomOf="@id/cardViEveryWeek"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewEveryQuarter"
@@ -289,7 +289,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/textSizeSmall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViewEveryQuarter">
+        app:layout_constraintTop_toBottomOf="@id/cardViewEveryQuarter"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewEveryYear"

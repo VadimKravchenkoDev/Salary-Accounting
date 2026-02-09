@@ -6,13 +6,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.arhizmei.salaryaccounting.R
+import com.arhizmei.salaryaccounting.databinding.FragmentCalculatorBinding
 
 class CalculatorFragment : Fragment() {
+    private var _binding: FragmentCalculatorBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calculator, container, false)
+        return inflater.inflate(
+            R.layout.fragment_calculator,
+            container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        _binding = FragmentCalculatorBinding.bind(view)
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
