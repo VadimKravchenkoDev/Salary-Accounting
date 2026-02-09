@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/marginStartMain"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="@dimen/marginTopMain"
         android:fontFamily="@font/inter_semibold"
         android:text="@string/salaryResultText"
         android:textColor="@color/black"
@@ -48,8 +48,8 @@
 
         <TextView
             android:id="@+id/salaryAmountText"
-            android:layout_width="158dp"
-            android:layout_height="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/marginStartMain"
             android:fontFamily="@font/inter"
             android:text="@string/salaryOfWeek"
