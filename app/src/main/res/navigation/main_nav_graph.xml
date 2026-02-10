@@ -6,7 +6,20 @@
 
     <fragment
         android:id="@+id/calculatorFragment"
-        android:name="com.arhizmei.salaryaccounting.ui.calculator.CalculatorFragment" />
+        android:name="com.arhizmei.salaryaccounting.ui.calculator.CalculatorFragment"
+        android:label="Calculator">
+
+        <action
+            android:id="@+id/action_calculatorFragment_to_resultCalculatorFragment"
+            app:destination="@id/resultCalculatorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultCalculatorFragment"
+        android:name="com.arhizmei.salaryaccounting.ui.calculator.ResultCalculatorFragment"
+        android:label="ResultCalculator" />
+
+
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.arhizmei.salaryaccounting.ui.calendar.CalendarFragment" />

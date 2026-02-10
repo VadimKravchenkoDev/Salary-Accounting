@@ -13,7 +13,7 @@ import com.arhizmei.salaryaccounting.databinding.FragmentCalculatorBinding
 class CalculatorFragment : Fragment() {
     private var _binding: FragmentCalculatorBinding? = null
     private val binding get() = _binding!!
-    private val viewModel : CalculatorViewModel by activityViewModels()
+    private val viewModel: CalculatorViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,7 +22,8 @@ class CalculatorFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(
             R.layout.fragment_calculator,
-            container, false)
+            container, false
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,13 +32,15 @@ class CalculatorFragment : Fragment() {
         _binding = FragmentCalculatorBinding.bind(view)
 
         binding.calculateBt.setOnClickListener {
-            val salary = binding.salaryAmountEdit.text.toString().toIntOrNull() ?:0
-            val hours = binding.hoursOfWeekEdit.text.toString().toIntOrNull() ?:0
-            val days = binding.dayOfWeekEdit.text.toString().toIntOrNull() ?:0
+            val salary = binding.salaryAmountEdit.text.toString().toIntOrNull() ?: 0
+            val hours = binding.hoursOfWeekEdit.text.toString().toIntOrNull() ?: 0
+            val days = binding.dayOfWeekEdit.text.toString().toIntOrNull() ?: 0
 
             viewModel.setData(salary, hours, days)
 
-            findNavController().navigate(R.id.action_ca)
+            findNavController().navigate(
+                R.id.action_calculatorFragment_to_resultCalculatorFragment
+            )
         }
 
     }

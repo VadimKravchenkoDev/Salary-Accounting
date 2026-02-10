@@ -14,7 +14,6 @@ class CalculatorViewModel(
     }
 
     val data: LiveData<CalculatorData> = state.getLiveData(KEY_DATA)
-
     fun setData(salary: Int, hours: Int, days: Int) {
         state[KEY_DATA] = CalculatorData(salary, hours, days)
     }
