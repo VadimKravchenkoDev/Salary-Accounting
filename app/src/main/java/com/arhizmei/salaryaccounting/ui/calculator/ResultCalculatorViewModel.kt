@@ -1,16 +1,15 @@
 package com.arhizmei.salaryaccounting.ui.calculator
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.arhizmei.salaryaccounting.ui.data.CalculatorData
 
-class CalculatorViewModel(
+class ResultCalculatorViewModel(
     private val state: SavedStateHandle
 ) : ViewModel() {
-    companion object {
+    companion object{
         private const val KEY_DATA = "calc_data"
     }
-    fun saveData(salary: Int, hours: Int, days: Int) {
-        state[KEY_DATA] = CalculatorData(salary, hours, days)
-    }
+    val data: LiveData<CalculatorData> =state.getLiveData(KEY_DATA)
 }

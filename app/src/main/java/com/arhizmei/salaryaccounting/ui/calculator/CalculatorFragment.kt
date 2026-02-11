@@ -28,21 +28,17 @@ class CalculatorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         _binding = FragmentCalculatorBinding.bind(view)
-
         binding.calculateBt.setOnClickListener {
             val salary = binding.salaryAmountEdit.text.toString().toIntOrNull() ?: 0
             val hours = binding.hoursOfWeekEdit.text.toString().toIntOrNull() ?: 0
             val days = binding.dayOfWeekEdit.text.toString().toIntOrNull() ?: 0
 
-            viewModel.setData(salary, hours, days)
-
+            viewModel.saveData(salary, hours, days)
             findNavController().navigate(
                 R.id.action_calculatorFragment_to_resultCalculatorFragment
             )
         }
-
     }
 
     override fun onDestroyView() {

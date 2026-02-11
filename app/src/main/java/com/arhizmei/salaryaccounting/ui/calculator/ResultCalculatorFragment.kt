@@ -12,7 +12,7 @@ import com.arhizmei.salaryaccounting.databinding.FragmentResultCalculatorBinding
 class ResultCalculatorFragment : Fragment() {
     private var _binding: FragmentResultCalculatorBinding? = null
     private val binding get() = _binding
-    private val viewModel: CalculatorViewModel by activityViewModels()
+    private val viewModel: ResultCalculatorViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,10 +28,13 @@ class ResultCalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentResultCalculatorBinding.bind(view)
-        viewModel.data.observe(viewLifecycleOwner) { calculatorData ->
-            binding?.dayOfWeekEdit?.text = calculatorData.days.toString()
-            binding?.hoursOfWeekEdit?.text = calculatorData.hours.toString()
-            binding?.salaryAmountEdit?.text = calculatorData.salary.toString()
+        viewModel.data.observe(viewLifecycleOwner) { data ->
+            data?.let {
+                binding?.dayOfWeekEdit?.text = it.days.toString()
+                binding?.hoursOfWeekEdit?.text = it.hours.toString()
+                binding?.salaryAmountEdit?.text = it.salary.toString()
+            }
+
         }
     }
 }
