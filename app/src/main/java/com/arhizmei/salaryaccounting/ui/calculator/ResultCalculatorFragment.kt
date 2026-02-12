@@ -14,7 +14,6 @@ import com.arhizmei.salaryaccounting.ui.data.CalculatorData
 class ResultCalculatorFragment : Fragment() {
     private var _binding: FragmentResultCalculatorBinding? = null
     private val binding get() = _binding
-    private val viewModel: ResultCalculatorViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +29,7 @@ class ResultCalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentResultCalculatorBinding.bind(view)
+
         val handle = findNavController().previousBackStackEntry?.savedStateHandle
         handle?.getLiveData<CalculatorData>("calc_data")
             ?.observe(viewLifecycleOwner) { data ->

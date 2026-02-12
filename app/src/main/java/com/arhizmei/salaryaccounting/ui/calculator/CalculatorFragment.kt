@@ -36,7 +36,6 @@ class CalculatorFragment : Fragment() {
             val days = binding.dayOfWeekEdit.text.toString().toIntOrNull() ?: 0
 
             viewModel.saveData(salary, hours, days)
-
             val navController = findNavController()
 
             navController.currentBackStackEntry?.savedStateHandle?.set("calc_data",
