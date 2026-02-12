@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.arhizmei.salaryaccounting.R
 import com.arhizmei.salaryaccounting.databinding.FragmentResultCalculatorBinding
+import com.arhizmei.salaryaccounting.ui.data.CalculatorData
 
 class ResultCalculatorFragment : Fragment() {
     private var _binding: FragmentResultCalculatorBinding? = null
@@ -28,13 +30,14 @@ class ResultCalculatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentResultCalculatorBinding.bind(view)
-        viewModel.data.observe(viewLifecycleOwner) { data ->
-            data?.let {
-                binding?.dayOfWeekEdit?.text = it.days.toString()
-                binding?.hoursOfWeekEdit?.text = it.hours.toString()
-                binding?.salaryAmountEdit?.text = it.salary.toString()
+        val handle = findNavController().previousBackStackEntry?.savedStateHandle
+        handle?.getLiveData<CalculatorData>("calc_data")
+            ?.observe(viewLifecycleOwner) { data ->
+                data?.let {
+                    binding?.dayOfWeekEdit?.text = it.days.toString()
+                    binding?.hoursOfWeekEdit?.text = it.hours.toString()
+                    binding?.salaryAmountEdit?.text = it.salary.toString()
+                }
             }
-
-        }
     }
 }

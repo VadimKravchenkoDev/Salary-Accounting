@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.arhizmei.salaryaccounting.R
 import com.arhizmei.salaryaccounting.databinding.FragmentCalculatorBinding
+import com.arhizmei.salaryaccounting.ui.data.CalculatorData
 
 class CalculatorFragment : Fragment() {
     private var _binding: FragmentCalculatorBinding? = null
@@ -35,7 +36,13 @@ class CalculatorFragment : Fragment() {
             val days = binding.dayOfWeekEdit.text.toString().toIntOrNull() ?: 0
 
             viewModel.saveData(salary, hours, days)
-            findNavController().navigate(
+
+            val navController = findNavController()
+
+            navController.currentBackStackEntry?.savedStateHandle?.set("calc_data",
+                CalculatorData(salary, hours, days))
+
+            navController.navigate(
                 R.id.action_calculatorFragment_to_resultCalculatorFragment
             )
         }
