@@ -44,7 +44,7 @@
         app:cardCornerRadius="@dimen/cornerLargeRadius"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/salaryText"
-        app:layout_marginStart="@dimen/marginTop">
+        >
 
         <TextView
             android:id="@+id/salaryAmountText"
